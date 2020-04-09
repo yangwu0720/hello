@@ -1,0 +1,5 @@
+server:
+  port: 8097
+spring:
+  application:
+    name: subject-build-app-monitoring

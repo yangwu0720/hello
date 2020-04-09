@@ -1,0 +1,59 @@
+server:
+  port: 8090
+spring:
+  application:
+    name: subject-build
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    platform: mysql
+    druid:
+      url: jdbc:mysql://39.105.193.80:4306/demo_test?useUnicode=true&characterEncoding=utf-8&useSSL=false&zeroDateTimeBehavior=convertToNull&serverTimezone
+      username: root
+      password: Sg20181111
+      driver-class-name: com.mysql.jdbc.Driver
+      test-while-idle: true
+      max-active: 20
+      initial-size: 10
+      min-idle: 5
+      max-wait: 600000
+      validation-query: SELECT 1 FROM DUAL
+      filters: config,wall,stat
+      filter:
+        stat:
+          merge-sql: true
+          slow-sql-millis: 2000
+  boot:
+    admin:
+      client:
+        url: http://localhost:8097
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+# druid
+subject:
+  build:
+    druid:
+      login-username: druid
+      login-password: 123456
+logging:
+  level:
+    cn:
+    edu:
+    zafu:
+      subjectbuild: debug
+  file:
+    path: D:\logs\subject-build
+    max-history: 7
+    max-size: 5MB
+    total-size-cap: 35MB
+    name: subject-build.log
+  pattern:
+    rolling-file-name: ${LOG_FILE}.%d{yyyy-MM-dd}.%i.log
+management:
+  endpoints:
+    web:
+      exposure:
+        include: ["health", "info", "metrics","beans","env","httptrace","loggers"]
+  endpoint:
+    health:
+      show-details: always
