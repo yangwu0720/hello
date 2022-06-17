@@ -18,7 +18,7 @@
         <java.version>1.8</java.version>
         <druid.version>1.1.9</druid.version>
         <mybatis-plus.version>3.3.1.tmp</mybatis-plus.version>
-        <fastjson.version>1.2.62</fastjson.version>
+        <fastjson.version>1.2.83</fastjson.version>
         <commons-lang.version>2.5</commons-lang.version>
         <spring-boot-admin.version>2.2.1</spring-boot-admin.version>
     </properties>
