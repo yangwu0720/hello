@@ -10,7 +10,7 @@
 
     <properties>
         <mybatis-plus-generator.version>3.3.1.tmp</mybatis-plus-generator.version>
-        <mysql-connector-java.version>8.0.19</mysql-connector-java.version>
+        <mysql-connector-java.version>8.0.28</mysql-connector-java.version>
         <velocity-engine-core.version>2.0</velocity-engine-core.version>
     </properties>
     <dependencies>
